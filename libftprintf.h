@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 13:35:50 by josemigu          #+#    #+#             */
-/*   Updated: 2025/04/16 13:40:51 by josemigu         ###   ########.fr       */
+/*   Updated: 2025/04/16 18:55:24 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdarg.h>
 
 int	ft_printf(const char *, ...);
 
