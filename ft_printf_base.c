@@ -6,13 +6,13 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 12:39:58 by josemigu          #+#    #+#             */
-/*   Updated: 2025/04/23 15:41:16 by josemigu         ###   ########.fr       */
+/*   Updated: 2025/04/23 17:43:43 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	printf_putbase(unsigned int n, const char *base)
+int	printf_putbase(unsigned long int n, const char *base)
 {
 	int				i;
 	unsigned int	len_base;

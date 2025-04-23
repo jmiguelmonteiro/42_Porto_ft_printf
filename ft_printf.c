@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 13:36:08 by josemigu          #+#    #+#             */
-/*   Updated: 2025/04/23 15:36:26 by josemigu         ###   ########.fr       */
+/*   Updated: 2025/04/23 17:35:03 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,14 @@ static int	process_conversion(const char conversion_type, va_list args)
 		nbytes += printf_putchr(va_arg(args, int));
 	if (conversion_type == 's')
 		nbytes += printf_putstr(va_arg(args, char *));
+	if (conversion_type == 'p')
+		nbytes += printf_putptr(va_arg(args, long long unsigned));
 	if (conversion_type == 'u')
-		nbytes += printf_putbase(va_arg(args, int), "0123456789");
+		nbytes += printf_putbase(va_arg(args, unsigned int), "0123456789");
 	if (conversion_type == 'x')
-		nbytes += printf_putbase(va_arg(args, int), "0123456789abcdef");
+		nbytes += printf_putbase(va_arg(args, unsigned int), "0123456789abcdef");
 	if (conversion_type == 'X')
-		nbytes += printf_putbase(va_arg(args, int), "0123456789ABCDEF");
+		nbytes += printf_putbase(va_arg(args, unsigned int), "0123456789ABCDEF");
 	if (conversion_type == '%')
 		nbytes += printf_putchr('%');
 	return (nbytes);
