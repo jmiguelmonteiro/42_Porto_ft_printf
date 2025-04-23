@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 13:35:50 by josemigu          #+#    #+#             */
-/*   Updated: 2025/04/23 12:42:34 by josemigu         ###   ########.fr       */
+/*   Created: 2025/04/23 11:41:37 by josemigu          #+#    #+#             */
+/*   Updated: 2025/04/23 12:56:52 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include <stdio.h>
+#include "libftprintf.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
+int	main(void)
+{
+	char	c = 'c';
+	
+	printf("123456789012345678901234567890123456789012345678901234567890\n");
+	printf("Bytes written    printf: %d\n",    printf("   printf %% %c\n", c));
+	printf("Bytes written ft_printf: %d\n", ft_printf("ft_printf %% %c\n", c));
 
-int	ft_printf(const char *, ...);
-int	printf_putchar(char);
-
-#endif
+	return (0);
+}
