@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   printf_putchr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/16 13:35:50 by josemigu          #+#    #+#             */
-/*   Updated: 2025/04/23 12:42:34 by josemigu         ###   ########.fr       */
+/*   Created: 2025/04/23 12:39:58 by josemigu          #+#    #+#             */
+/*   Updated: 2025/04/23 15:14:50 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "ft_printf.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-
-int	ft_printf(const char *, ...);
-int	printf_putchar(char);
-
-#endif
+int	printf_putchr(const unsigned char c)
+{
+	write(1, &c, 1);
+	return (1);
+}

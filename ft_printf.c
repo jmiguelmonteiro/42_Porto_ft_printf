@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.c                                      :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 13:36:08 by josemigu          #+#    #+#             */
-/*   Updated: 2025/04/23 13:06:24 by josemigu         ###   ########.fr       */
+/*   Updated: 2025/04/23 15:36:26 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-static int process_conversion(const char conversion_type, va_list args)
+static int	process_conversion(const char conversion_type, va_list args)
 {
 	int	nbytes;
 
 	nbytes = 0;
 	if (conversion_type == 'c')
-		nbytes += printf_putchar(va_arg(args, int));
+		nbytes += printf_putchr(va_arg(args, int));
+	if (conversion_type == 's')
+		nbytes += printf_putstr(va_arg(args, char *));
+	if (conversion_type == 'u')
+		nbytes += printf_putbase(va_arg(args, int), "0123456789");
+	if (conversion_type == 'x')
+		nbytes += printf_putbase(va_arg(args, int), "0123456789abcdef");
+	if (conversion_type == 'X')
+		nbytes += printf_putbase(va_arg(args, int), "0123456789ABCDEF");
 	if (conversion_type == '%')
-		nbytes += printf_putchar('%');
+		nbytes += printf_putchr('%');
 	return (nbytes);
 }
 
@@ -28,7 +36,7 @@ int	ft_printf(const char *format, ...)
 {
 	va_list	args;
 	int		nbytes;
-	
+
 	nbytes = 0;
 	va_start(args, format);
 	while (*format)
@@ -40,10 +48,11 @@ int	ft_printf(const char *format, ...)
 				nbytes += process_conversion(*(format + 1), args);
 				format++;
 			}
-		} else
-			nbytes += printf_putchar(*format);
+		}
+		else
+			nbytes += printf_putchr(*format);
 		format++;
- 	}
+	}
 	va_end(args);
 	return (nbytes);
 }
