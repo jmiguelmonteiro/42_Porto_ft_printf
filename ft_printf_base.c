@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 12:39:58 by josemigu          #+#    #+#             */
-/*   Updated: 2025/04/23 17:43:43 by josemigu         ###   ########.fr       */
+/*   Updated: 2025/04/25 12:46:53 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	printf_putbase(unsigned long int n, const char *base)
 	len_base = 0;
 	while (base[len_base])
 		len_base++;
-
 	i = 0;
 	if (n >= len_base)
 	{

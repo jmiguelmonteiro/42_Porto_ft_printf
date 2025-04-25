@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 12:39:58 by josemigu          #+#    #+#             */
-/*   Updated: 2025/04/23 19:40:53 by josemigu         ###   ########.fr       */
+/*   Updated: 2025/04/25 12:48:14 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 int	printf_putint(int d)
 {
-	int	i;
+	int			i;
 	long int	dd;
 
 	i = 0;
 	dd = d;
-	if ( dd < 0)
+	if (dd < 0)
 	{
 		i += printf_putchr('-');
 		dd *= -1;

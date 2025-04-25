@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 12:39:58 by josemigu          #+#    #+#             */
-/*   Updated: 2025/04/23 17:43:20 by josemigu         ###   ########.fr       */
+/*   Updated: 2025/04/25 12:47:28 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	printf_putptr(unsigned long int ptr)
 {
 	int	i;
-	
+
 	if (ptr == 0)
 		return (printf_putstr(PTRNULL));
 	i = 0;

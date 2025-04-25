@@ -6,7 +6,7 @@
 /*   By: josemigu <josemigu@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 11:41:37 by josemigu          #+#    #+#             */
-/*   Updated: 2025/04/23 18:04:51 by josemigu         ###   ########.fr       */
+/*   Updated: 2025/04/25 13:01:06 by josemigu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ int	main(void)
 		"%p %u %x %X %%\n", p, x, x, x));
  	printf("Bytes written ft_printf: %d\n", ft_printf("ft_printf: "\
 		"%p %u %x %X %%\n", p, x, x, x));
+
+	printf("123456789012345678901234567890123456789012345678901234567890\n");
+ 	printf("Bytes written ft_printf: %d\n", ft_printf("ft_printf: "\
+		"%z", c));
 
 	return (0);
 }
